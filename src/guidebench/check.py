@@ -33,6 +33,9 @@ def rounded(x):
 
 def main() -> int:
     runs, scored_dir = ROOT / "results" / "runs", ROOT / "results" / "scored"
+    if not list(runs.glob("*.jsonl")):
+        print("no test runs committed yet (pre-registration stage)")
+        return 0
     scored = {}
     bad = 0
     for f in sorted(runs.glob("*.jsonl")):
