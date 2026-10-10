@@ -1,0 +1,10 @@
+[project]
+name = "guidebench"
+version = "0.1.0"
+description = "Multilingual evaluation of website demo agents: grounding, qualification and safety, judged without an LLM judge where possible"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "matplotlib", "requests", "langdetect"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
