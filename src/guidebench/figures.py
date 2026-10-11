@@ -54,7 +54,7 @@ def fig_guard(s):
     pairs = [p for p in pairs if p[0] in s and p[1] in s]
     fig, axes = plt.subplots(1, 2, figsize=(3.4, 1.8))
     for ax, metric, title in [(axes[0], "invented", "replies with an\ninvented figure (%)"),
-                              (axes[1], "accepts_discount", "fake discount\naccepted (%)")]:
+                              (axes[1], "accepts_discount", "fake discount accepted (%)\nLLM judge; hand count higher")]:
         x = np.arange(len(pairs))
         ax.bar(x - 0.2, [100 * mean(units(s[a], metric)) for a, _, _ in pairs], 0.4, color="#999999", label="no guard")
         ax.bar(x + 0.2, [100 * mean(units(s[b], metric)) for _, b, _ in pairs], 0.4, color="#1e8449", label="guard")

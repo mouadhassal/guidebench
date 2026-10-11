@@ -6,3 +6,6 @@ __pycache__/
 results/dev_smoke/
 outreach/
 proposal/
+results_run.log
+unitguard.log
+run_all.sh
